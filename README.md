@@ -31,7 +31,7 @@ npm run build   # production build in dist/
 
 Built with React, TypeScript and Vite. The CSV parser is hand-written so that untouched cells keep their exact original text; see `src/lib/csv.ts`.
 
-Pushing to `main` runs lint, tests and build, then deploys to GitHub Pages (enable *Pages → Source: GitHub Actions* in the repo settings).
+CI runs lint, tests and build on every push and pull request. The site is a static build, deployed on Vercel.
 
 ## License
 
