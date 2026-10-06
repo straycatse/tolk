@@ -2,6 +2,8 @@
 
 **Translation CSV editor for Shopify.** Edit the file from *Settings → Languages → Export* without breaking it.
 
+**[Try it live →](https://tolk-delta.vercel.app)** (includes a sample file, no Shopify store needed)
+
 Some Shopify strings can only be translated by exporting every translation to CSV, editing the file and importing it again. Spreadsheets make that risky: they mangle UTF-8, break multi-line HTML cells and give you no idea which of 20,000 rows still need work. Tolk understands the file.
 
 > Your file never leaves your browser. Tolk has no server and stores nothing.
