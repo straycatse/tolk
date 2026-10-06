@@ -1,0 +1,25 @@
+Type,Identification,Field,Locale,Market,Status,Default content,Translated content
+PRODUCT,8812345678901,title,sv,,outdated,Wool Beanie,Mössa i ull
+PRODUCT,8812345678901,body_html,sv,,,"<p>A warm beanie knitted from <strong>100% merino wool</strong>.</p>
+<ul><li>One size</li><li>Hand wash only</li></ul>",
+PRODUCT,8812345678902,title,sv,,,"Canvas Tote Bag, Large",
+PRODUCT,8812345678902,body_html,sv,,,"<p>Sturdy and roomy, holds up to 15 kg.</p>","<p>Stadig och rymlig, rymmer upp till 15 kg.</p>"
+COLLECTION,4412345678901,title,sv,,,Winter Essentials,Vinterfavoriter
+COLLECTION,4412345678901,body_html,sv,,,<p>Everything you need for the cold months.</p>,<p>Allt du behöver för de kalla månaderna.
+METAFIELD,2912345678901,value,sv,,,Made in Sweden,Made in Sweden
+METAFIELD,2912345678902,value,sv,,,"Care: wash at 30°C, do not tumble dry",
+MENU,2312345678901,title,sv,,,Main menu,Huvudmeny
+LINK,3312345678901,title,sv,,,Shop all,Handla allt
+LINK,3312345678902,title,sv,,,About us,
+ONLINE_STORE_THEME,1612345678901,general.cart.title,sv,,,Your cart,Din varukorg
+ONLINE_STORE_THEME,1612345678901,general.cart.item_count,sv,,,"{{ count }} items in your cart",varor i din varukorg
+ONLINE_STORE_THEME,1612345678901,general.cart.free_shipping,sv,,,"Spend {{ amount }} more for free shipping",
+ONLINE_STORE_THEME,1612345678901,sections.header.announcement,sv,,,"Free shipping over {{ threshold }} - ""limited time""","Fri frakt över {{ threshold }} - ""tidsbegränsat"""
+ONLINE_STORE_THEME,1612345678901,customer.login.title,sv,,,Login,Logga in
+ONLINE_STORE_THEME,1612345678901,customer.login.forgot_password,sv,,,Forgot your password?,
+SHOP_POLICY,7712345678901,body,sv,,,"<h2>Returns</h2><p>You can return items within 30 days.</p>",
+EMAIL_TEMPLATE,5512345678901,title,sv,,,Order {{ name }} confirmed,Order {{ name }} bekräftad
+PRODUCT,8812345678901,title,de,,,Wool Beanie,Wollmütze
+PRODUCT,8812345678902,title,de,,,"Canvas Tote Bag, Large",
+ONLINE_STORE_THEME,1612345678901,general.cart.title,de,,,Your cart,Dein Warenkorb
+ONLINE_STORE_THEME,1612345678901,general.cart.item_count,de,,,"{{ count }} items in your cart","{{ count }} Artikel in deinem Warenkorb"
