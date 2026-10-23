@@ -14,6 +14,7 @@ Some Shopify strings can only be translated by exporting every translation to CS
 - **Find the gaps**: filter by missing, same as source, translated, edited or rows with issues.
 - **Catches import breakers**: missing or unknown Liquid placeholders (`{{ count }}`) and unbalanced HTML are flagged before you import.
 - **Export only what changed**: a small import file that can't overwrite translations you didn't touch.
+- **Copy theme translations to another theme**: theme translations belong to one theme, so a new or re-connected theme (e.g. from GitHub) starts without them. Tolk rewrites the theme ID and exports an import file for the new theme.
 - **Lossless round-trip**: unedited rows are written back byte for byte, including quoting, line endings and BOM.
 
 ## Usage
