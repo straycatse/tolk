@@ -2,6 +2,7 @@ import { useVirtualizer } from '@tanstack/react-virtual'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { DropZone } from './components/DropZone'
 import { RowEditor } from './components/RowEditor'
+import { ThemeCopyDialog } from './components/ThemeCopyDialog'
 import {
   CsvFormatError,
   isChanged,
@@ -13,6 +14,7 @@ import {
 import { downloadText, exportName } from './lib/download'
 import { ALL, matches, type Filters, type StatusFilter } from './lib/filter'
 import { rowStatus, typeLabel } from './lib/status'
+import { isThemeRow } from './lib/theme'
 
 interface Loaded {
   doc: TranslationDoc
@@ -35,6 +37,7 @@ export default function App() {
   const [rows, setRows] = useState<Row[]>([])
   const [error, setError] = useState<string | null>(null)
   const [filters, setFilters] = useState<Filters>({ locale: ALL, type: ALL, status: 'all', query: '' })
+  const [copyingTheme, setCopyingTheme] = useState(false)
 
   const load = useCallback((text: string, fileName: string) => {
     try {
@@ -69,6 +72,7 @@ export default function App() {
   }, [])
 
   const changedCount = useMemo(() => rows.filter(isChanged).length, [rows])
+  const hasTheme = useMemo(() => rows.some(isThemeRow), [rows])
 
   useEffect(() => {
     if (changedCount === 0) return
@@ -119,10 +123,23 @@ export default function App() {
         <button type="button" onClick={() => exportFile(false)}>
           Export full file
         </button>
+        {hasTheme && (
+          <button type="button" onClick={() => setCopyingTheme(true)}>
+            Copy to theme…
+          </button>
+        )}
         <button type="button" className="link" onClick={close}>
           Close
         </button>
       </header>
+      {copyingTheme && (
+        <ThemeCopyDialog
+          doc={loaded.doc}
+          rows={rows}
+          fileName={loaded.fileName}
+          onClose={() => setCopyingTheme(false)}
+        />
+      )}
       {error && (
         <p className="error banner" role="alert">
           {error}
