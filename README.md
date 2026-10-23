@@ -1,4 +1,4 @@
-# Tolk
+# Tolk - Shopify Translations Editor
 
 **Translation CSV editor for Shopify.** Edit the file from *Settings → Languages → Export* without breaking it.
 
